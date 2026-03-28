@@ -1,5 +1,7 @@
+import java.util.ArrayList;
+
 // =======================
-// TAREFA 1, 2 e 3
+// TAREFA 1 - Classe Aluno (atributos, construtor, exibirDados)
 // =======================
 abstract class Aluno {
     private String nome;
@@ -7,6 +9,10 @@ abstract class Aluno {
     private double nota;
 
     public Aluno(String nome, String matricula, double nota) {
+
+        // =======================
+        // TAREFA 3 - Validação no construtor
+        // =======================
         if (nome == null || nome.isEmpty()) {
             this.nome = "Nome não informado";
         } else {
@@ -28,6 +34,9 @@ abstract class Aluno {
         System.out.println("Nota: " + nota);
     }
 
+    // =======================
+    // TAREFA 2 - Encapsulamento (set/get)
+    // =======================
     public void setNota(double nota) {
         if (nota >= 0 && nota <= 10) {
             this.nota = nota;
@@ -41,21 +50,21 @@ abstract class Aluno {
     }
 
     // =======================
-    // TAREFA 5
+    // TAREFA 5 - Ajustar Nota
     // =======================
     public void ajustarNota(double novaNota) {
         setNota(novaNota);
     }
 
     // =======================
-    // TAREFA 9
+    // TAREFA 9 - Método abstrato
     // =======================
     public abstract boolean verificarAprovacao();
 }
 
 
 // =======================
-// TAREFA 4 e 9
+// TAREFA 4 - AlunoGraduacao
 // =======================
 class AlunoGraduacao extends Aluno {
 
@@ -69,6 +78,10 @@ class AlunoGraduacao extends Aluno {
     }
 }
 
+
+// =======================
+// TAREFA 4 - AlunoPosGraduacao
+// =======================
 class AlunoPosGraduacao extends Aluno {
 
     public AlunoPosGraduacao(String nome, String matricula, double nota) {
@@ -87,7 +100,7 @@ class AlunoPosGraduacao extends Aluno {
 
 
 // =======================
-// TAREFA 6
+// TAREFA 6 - Classe Professor
 // =======================
 class Professor {
     private String nome;
@@ -120,7 +133,7 @@ class Professor {
 
 
 // =======================
-// TAREFA 7
+// TAREFA 7 - ProfessorEfetivo
 // =======================
 class ProfessorEfetivo extends Professor {
 
@@ -129,6 +142,10 @@ class ProfessorEfetivo extends Professor {
     }
 }
 
+
+// =======================
+// TAREFA 7 - ProfessorTemporario
+// =======================
 class ProfessorTemporario extends Professor {
     private int mesesContrato;
 
@@ -149,10 +166,8 @@ class ProfessorTemporario extends Professor {
 
 
 // =======================
-// TAREFA 8
+// TAREFA 8 - Classe Disciplina
 // =======================
-import java.util.ArrayList;
-
 class Disciplina {
     private String nome;
     private Professor professor;
@@ -187,7 +202,7 @@ class Disciplina {
 
 
 // =======================
-// CLASSE PRINCIPAL
+// CLASSE PRINCIPAL - Testes
 // =======================
 public class SistemaAcademico {
     public static void main(String[] args) {
