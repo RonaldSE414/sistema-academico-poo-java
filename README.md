@@ -4,6 +4,7 @@ Projeto desenvolvido como atividade acadêmica para a disciplina de Programaçã
 
 O sistema simula o gerenciamento de alunos, professores e disciplinas, aplicando conceitos fundamentais da orientação a objetos em Java.
 
+O projeto foi desenvolvido em duas versões: uma em arquivo único e outra organizada em múltiplos arquivos dentro da pasta SistemaAcademico. Ambas possuem o mesmo funcionamento.
 ---
 
 ## Funcionalidades
